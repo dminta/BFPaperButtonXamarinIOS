@@ -156,6 +156,8 @@ namespace BFPaperButtonXamarinIOS
 
 			FadeAndClippingMaskRect = new CGRect(Bounds.X, Bounds.Y, Bounds.Size.Width, Bounds.Size.Height);
 
+			SetEnabled(Enabled);
+
 			SetNeedsDisplay();
 			Layer.SetNeedsDisplay();
 		}
@@ -190,6 +192,8 @@ namespace BFPaperButtonXamarinIOS
 			}
 
 			FadeAndClippingMaskRect = new CGRect(Bounds.X, Bounds.Y, Bounds.Size.Width, Bounds.Size.Height);
+
+			SetEnabled(Enabled);
 
 			SetNeedsDisplay();
 			Layer.SetNeedsDisplay();
