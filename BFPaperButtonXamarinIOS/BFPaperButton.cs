@@ -631,7 +631,7 @@ namespace BFPaperButtonXamarinIOS
 
 			UIBezierPath endingCirclePath = UIBezierPath.FromRoundedRect(endingRectSizerView.Frame, tapCircleFinalDiameter / 2f);
 
-			CAShapeLayer tapCircle = RippleAnimationQueue.GetItem<CAShapeLayer>(0);
+			CAShapeLayer tapCircle = (RippleAnimationQueue.Count > 0) ? RippleAnimationQueue.GetItem<CAShapeLayer>(0) : null;
 			if (tapCircle != null)
 			{
 				if (RippleAnimationQueue.Count > 0)
@@ -643,7 +643,7 @@ namespace BFPaperButtonXamarinIOS
 				CGPath startingPath = tapCircle.Path;
 				nfloat startingOpacity = tapCircle.Opacity;
 
-				if (tapCircle.AnimationKeys.Length > 0)
+				if (tapCircle.AnimationKeys != null && tapCircle.AnimationKeys.Length > 0)
 				{
 					startingPath = tapCircle.Path;
 					startingOpacity = tapCircle.PresentationLayer.Opacity;
