@@ -473,7 +473,9 @@ namespace BFPaperButtonXamarinIOS
 
 				float startingOpacity = BackgroundColorFadeLayer.Opacity;
 
-				if (BackgroundColorFadeLayer.AnimationKeys != null && BackgroundColorFadeLayer.AnimationKeys.Length > 0)
+				if (BackgroundColorFadeLayer.AnimationKeys != null 
+				    && BackgroundColorFadeLayer.AnimationKeys.Length > 0
+				    && BackgroundColorFadeLayer.PresentationLayer != null)
 				{
 					startingOpacity = BackgroundColorFadeLayer.PresentationLayer.Opacity;
 				}
@@ -603,7 +605,9 @@ namespace BFPaperButtonXamarinIOS
 			{
 				nfloat startingOpacity = BackgroundColorFadeLayer.Opacity;
 
-				if (BackgroundColorFadeLayer.AnimationKeys != null && BackgroundColorFadeLayer.AnimationKeys.Length > 0)
+				if (BackgroundColorFadeLayer.AnimationKeys != null 
+				    && BackgroundColorFadeLayer.AnimationKeys.Length > 0 
+				    && BackgroundColorFadeLayer.PresentationLayer != null)
 				{
 					startingOpacity = BackgroundColorFadeLayer.PresentationLayer.Opacity;
 				}
@@ -646,7 +650,10 @@ namespace BFPaperButtonXamarinIOS
 				if (tapCircle.AnimationKeys != null && tapCircle.AnimationKeys.Length > 0)
 				{
 					startingPath = tapCircle.Path;
-					startingOpacity = tapCircle.PresentationLayer.Opacity;
+					if (tapCircle.PresentationLayer != null)
+					{
+						startingOpacity = tapCircle.PresentationLayer.Opacity;
+					}
 				}
 
 				CABasicAnimation tapCircleGrowthAnimation = CABasicAnimation.FromKeyPath("path");
