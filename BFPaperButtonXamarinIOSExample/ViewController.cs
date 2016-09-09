@@ -138,7 +138,7 @@ namespace BFPaperButtonXamarinIOSExample
 			View.AddSubview(circle2);
 
 			var circle3 = new BFPaperButton(new CoreGraphics.CGRect(212, 468, 86, 86), false);
-			circle3.SetTitle("Center", UIControlState.Normal);
+			circle3.SetTitle("Custom", UIControlState.Normal);
 			circle3.SetTitleFont(UIFont.FromName("HelveticaNeue-Light", 15f));
 			circle3.SetTitleColor(UIColor.FromRGBA(33f / 255f, 33f / 255f, 33f / 255f, 1f), UIControlState.Normal);
 			circle3.SetTitleColor(UIColor.FromRGBA(33f / 255f, 33f / 255f, 33f / 255f, 1f), UIControlState.Highlighted);
