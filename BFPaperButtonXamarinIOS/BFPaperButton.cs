@@ -262,7 +262,7 @@ namespace BFPaperButtonXamarinIOS
 
 		public void SetTitleFont(UIFont font)
 		{
-			if (_titleFont != null)
+			if (_titleFont != font)
 			{
 				_titleFont = font;
 				TitleLabel.Font = font;
